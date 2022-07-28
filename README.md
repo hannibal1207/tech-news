@@ -1,5 +1,10 @@
+# raspagem de dados
 
-# Sumário
+## Projeto de raspagem de dados feito em python.
+
+<img src="https://img.shields.io/static/v1?label=raspagem de dados&message=Hannibal1207&color=7159c1&style=for-the-badge&logo=ghost"/>
+
+## Sumário
 
 - [Habilidades](#habilidades)
 - [Entregáveis](#Entregáveis)
@@ -440,110 +445,17 @@ Esta função irá buscar as notícias por categoria.
 
 - Será validado que é possível buscar uma notícia tanto pela categoria em maiúsculas como em minúsculas
 
-### 10 - Crie a função `top_5_news`
-local: `tech_news/analyzer/ratings.py`
-
-Esta função irá listar as cinco notícias mais populares; nosso critério de popularidade será a soma dos compartilhamentos e comentários.
-
-- A função deve buscar as notícias do banco de dados e calcular a sua "popularidade" somando seu número de compartilhamentos e comentários.
-- A função deve ordenar as notícias por ordem de popularidade.
-- Em caso de empate, o desempate deve ser por ordem alfabética de título.
-- A função deve ter retorno no mesmo formato do requisito anterior, porém limitado a 5 notícias.
-- Caso haja menos de cinco notícias, no banco de dados, deve-se retornar todas as notícias existentes;
-- Caso não haja notícias disponíveis, deve-se retornar uma lista vazia.
-
-✍️ Teste manual: abra um terminal Python importando esta função através do comando `python3 -i tech_news/analyzer/ratings.py` e invoque a função utilizando diferentes parâmetros. Exemplo: `top_5_news()`.
-
-**O que será verificado:**
-
-- Será validado que é possível buscar as cinco top notícias
-
-- Será validado que é possível buscar as cinco top notícias e retornar vazio caso não tenha nenhuma notícia
-
-- Caso houver menos de 5 notícias, serão retornadas quantas houverem
-
-
-### 11 - Crie a função `top_5_categories`
-local: `tech_news/analyzer/ratings.py`
-
-Esta função irá listar as cinco categorias com maior ocorrência no banco de dados. 
-
-- As categorias devem ser ordenadas por ordem alfabética.
-- As top 5 categorias da análise devem ser retornadas em uma lista no formato `["category1", "category2"]`;
-- Caso haja menos de cinco categorias, no banco de dados, deve-se retornar todas as categorias existentes;
-- Caso não haja categorias disponíveis, deve-se retornar uma lista vazia.
-
-✍️ Teste manual: abra um terminal Python importando esta função através do comando `python3 -i tech_news/analyzer/ratings.py` e invoque a função utilizando diferentes parâmetros. Exemplo: `top_5_categories()`.
-
-**O que será verificado:**
-
-- Será validado que é possível buscar as cinco top categorias
-
-- Será validado que é possível buscar as cinco top categorias e retornar vazio caso não tenha nenhuma notícia
-
-- Caso houver menos de 5 categorias, serão retornadas quantas houverem
-
+---
+### Autor
 ---
 
-## Requisitos bônus:
+<a href="https://github.com/hannibal1207">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/74434291?s=400&u=d7e2fcf5961b434f85038041f537e5ea02c875d1&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Mathaus Annibal</b></sub></a><a name="autor">🚀</a>
 
-### 12 - Crie a função `analyzer_menu`
-local: `tech_news/menu.py`
 
-Esta função é o menu do nosso programa. Através dele poderemos operar as funcionalidades que criamos. Será um menu de opções, em que cada opção pede as informações necessárias para disparar uma ação.
+Feito com ❤️ por Mathaus Annibal 👋🏽 Entre em contato!
 
-- O texto exibido pelo menu deve ser exatamente:
-```
-Selecione uma das opções a seguir:
- 0 - Popular o banco com notícias;
- 1 - Buscar notícias por título;
- 2 - Buscar notícias por data;
- 3 - Buscar notícias por fonte;
- 4 - Buscar notícias por categoria;
- 5 - Listar top 5 notícias;
- 6 - Listar top 5 categorias;
- 7 - Sair.
-```
-
-- Caso a opção `0` seja selecionada, seve-se exibir a mensagem "Digite quantas notícias serão buscadas:"
-
-- Caso a opção `1` seja selecionada, deve-se exibir a mensagem "Digite o título:";
-
-- Caso a opção `2` seja selecionada, deve-se exibir a mensagem "Digite a data no formato aaaa-mm-dd:";
-
-- Caso a opção `3` seja selecionada, deve-se exibir a mensagem "Digite a fonte:";
-
-- Caso a opção `4` seja selecionada, deve-se exibir a mensagem "Digite a categoria:";
-
-- Caso a opção não exista, exiba a mensagem de erro "Opção inválida" na `stderr`.
-
-📌 A função `input` deve ser utilizada para receber a entrada de dados da pessoa usuária.
-
-✍️ Teste manual: dentro de um ambiente virtual onde seu projeto foi configurado, digite o comando `tech-news-analyzer`, o menu deve ser exibido. Isto acontece pois durante a configuração inicial do projeto já configuramos para que a função seja corretamente chamada quando este comando seja invocado.
-
-### 13 - Implemente as funcionalidades do menu
-local: `tech_news/menu.py`
-
-- Quando selecionada uma opção do menu, e inseridas as informações necessárias, a ação adequada deve ser realizada.
-
-- Caso a opção `0` seja selecionada, a importação deve ser feita utilizando a função `get_tech_news`;
-
-- Caso a opção `1` seja selecionada, a importação deve ser feita utilizando a função `search_by_title` e seu resultado deve ser impresso em tela;
-
-- Caso a opção `2` seja selecionada, a exportação deve ser feita utilizando a função `search_by_date` e seu resultado deve ser impresso em tela;
-
-- Caso a opção `3` seja selecionada, a importação deve ser feita utilizando a função `search_by_source` e seu resultado deve ser impresso em tela;
-
-- Caso a opção `4` seja selecionada, a exportação deve ser feita utilizando a função `search_by_category` e seu resultado deve ser impresso em tela;
-
-- Caso a opção `5` seja selecionada, a raspagem deve ser feita utilizando a função `top_5_news` e seu resultado deve ser impresso em tela;
-
-- Caso a opção `6` seja selecionada, a raspagem deve ser feita utilizando a função `top_5_categories` e seu resultado deve ser impresso em tela;
-
-- Caso a opção `7` seja selecionada, deve-se encerrar a execução do script e deve-se exibir a mensagem "Encerrando script";
-
-- Caso alguma exceção seja lançada, a mesma deve ser capturada e sua mensagem deve ser exibida na saída padrão de erros (`stderr`).
-
-✍️ Teste manual: dentro de um ambiente virtual onde seu projeto foi configurado, digite o comando `tech-news-analyzer`, assim você conseguirá interagir com o menu.
-
----
+[![Linkedin Badge](https://img.shields.io/badge/-Mathaus-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mathaus-annibal-5658401b7/)](https://www.linkedin.com/in/mathaus-annibal-5658401b7/) 
+[![Gmail Badge](https://img.shields.io/badge/-mathausannibal@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mathausannibal@gmail.com)](mailto:mathausannibal@gmail.com)
